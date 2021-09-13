@@ -72,3 +72,78 @@ let Nafta = precioNafta(2000,litrosNafta(300));
 
 console.log(Nafta);
 
+
+/*
+Ejercicio 5
+Crear un array que contenga números del 1 al 10. 
+Retornar un nuevo array que contenga todos los números multiplicados por dos
+*/
+
+let lista10=[]
+
+for(let i = 1;i<=10;i++){
+    lista10.push(i)
+}
+console.log(lista10);
+
+let lista10por2=[]
+
+lista10.forEach(numero =>{
+    lista10por2.push(numero*2);
+});
+
+console.log("esto es con foreach: "+lista10por2);
+
+let lista2 = lista10.map(item => {
+    return item*2
+});
+
+console.log("esto es con map: "+lista2);
+
+
+
+/*
+Ejercicio 6
+
+Del array que devuelve el ejercicio número 1, filtrar los que sean mayores a 5
+
+*/
+
+let numerosMayor5 = lista2.filter(numero => numero > 5);
+
+console.log("Estos son los mayores a 5: "+numerosMayor5);
+
+
+
+/*
+Ejercicio 7
+
+Del array que devuelve el ejercicio 2, buscar el primero que sea mayor a 10
+
+*/
+
+let primerMayor10=numerosMayor5.find(numero=>numero>10);
+console.log("Este es el primer numero mayor a 10: "+primerMayor10);
+
+
+/*
+Ejercicio 8
+
+Dado el siguiente array filtremos a los pokemones con poder menor a 10.
+
+*/
+
+let pokemones = [ 
+    { nombre: 'pikachu', poder: 12 },
+    { nombre: 'bulbasaur', poder: 6 },
+    { nombre: 'charizard', poder: 19 },
+    { nombre: 'squirtle', poder: 3 },
+    { nombre: 'metwo', poder: 6 }, 
+    ]
+    
+let pokeMenor10 = pokemones.filter(pokemon => pokemon.poder < 10);
+
+
+console.log("Estos son los pokemones con poder menor a 10: "+pokeMenor10.nombre);
+
+
